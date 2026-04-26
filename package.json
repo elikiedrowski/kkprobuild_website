@@ -1,0 +1,16 @@
+{
+  "name": "kkprobuild-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "K&K ProBuild — Southern Oregon general construction website",
+  "scripts": {
+    "start": "serve -l tcp://0.0.0.0:${PORT:-3000} --no-clipboard",
+    "dev": "serve -l 3000 --no-clipboard"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

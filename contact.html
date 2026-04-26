@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get a free estimate from K&K ProBuild. Tell us about your kitchen, bath, deck, ADU, or mini-split project &mdash; we serve Eagle Point and the Rogue Valley.">
+    <meta name="theme-color" content="#1f3a26">
+    <title>Contact &amp; Free Estimate — K&K ProBuild</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-small.png">
+    <link rel="canonical" href="https://kkprobuild.com/contact.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <a href="/" aria-label="K&K ProBuild home"><img src="assets/images/logo-small.png" alt="K&K ProBuild" class="logo"></a>
+                <span class="brand-name">K&amp;K <span>ProBuild</span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="testimonials.html" class="nav-link">Reviews</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="btn btn-primary nav-cta active">Get a Free Estimate</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+
+    <section class="hero hero-page">
+        <div class="hero-inner">
+            <p class="eyebrow" style="color: var(--amber-light);">Get In Touch</p>
+            <h1>Tell Us About Your <span>Project</span></h1>
+            <p class="hero-sub">Estimates are free, the conversation is straightforward, and we&rsquo;ll get back to you within one business day.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Form -->
+                <div class="form-card reveal">
+                    <h2 style="margin-bottom: .35rem;">Request an Estimate</h2>
+                    <p style="color: var(--ink-soft); margin-bottom: 1.5rem;">Fill in what you can &mdash; we&rsquo;ll follow up by phone or email.</p>
+
+                    <form id="estimateForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                        <!-- Web3Forms access key — REPLACE WITH REAL KEY from web3forms.com (free, no signup needed beyond email verify) -->
+                        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
+                        <input type="hidden" name="subject" value="New estimate request — K&K ProBuild">
+                        <input type="hidden" name="from_name" value="kkprobuild.com">
+                        <input type="hidden" name="redirect" value="https://kkprobuild.com/thank-you.html">
+                        <!-- Honeypot -->
+                        <input type="text" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name <span class="req">*</span></label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required autocomplete="given-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name <span class="req">*</span></label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required autocomplete="family-name">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required autocomplete="tel" placeholder="(541) 555-0123">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city" class="form-label">Project City</label>
+                            <input type="text" id="city" name="city" class="form-input" placeholder="e.g. Eagle Point, OR" autocomplete="address-level2">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="projectType" class="form-label">Project Type <span class="req">*</span></label>
+                                <select id="projectType" name="projectType" class="form-select" required>
+                                    <option value="">Select one...</option>
+                                    <option>Kitchen Remodel</option>
+                                    <option>Bathroom Remodel</option>
+                                    <option>Mini-Split Install</option>
+                                    <option>Deck or Fence</option>
+                                    <option>ADU / New Build</option>
+                                    <option>Plumbing Service</option>
+                                    <option>Addition / Renovation</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget" class="form-label">Budget Range</label>
+                                <select id="budget" name="budget" class="form-select">
+                                    <option value="">Not sure yet</option>
+                                    <option>Under $5,000</option>
+                                    <option>$5,000 – $15,000</option>
+                                    <option>$15,000 – $40,000</option>
+                                    <option>$40,000 – $100,000</option>
+                                    <option>$100,000+</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline" class="form-label">Timeline</label>
+                            <select id="timeline" name="timeline" class="form-select">
+                                <option value="">Flexible</option>
+                                <option>ASAP / Emergency</option>
+                                <option>Within 1 month</option>
+                                <option>1 – 3 months</option>
+                                <option>3 – 6 months</option>
+                                <option>Just gathering info</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description" class="form-label">Project Description <span class="req">*</span></label>
+                            <textarea id="description" name="description" class="form-textarea" required placeholder="A few sentences about what you&rsquo;re thinking. Square footage, materials you like, things you want changed &mdash; whatever helps."></textarea>
+                            <p class="form-help">Photos help a lot. After you submit, you can email pictures to <a href="mailto:ezra@kkprobuild.com">ezra@kkprobuild.com</a>.</p>
+                        </div>
+
+                        <div class="form-error" id="formError">Please fill in the required fields.</div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">Send My Request</button>
+                        <p class="form-help text-center mt-3">We&rsquo;ll never share your info. Expect a reply within one business day.</p>
+                    </form>
+                </div>
+
+                <!-- Info -->
+                <aside class="contact-info reveal">
+                    <h3>Reach Us Directly</h3>
+                    <ul>
+                        <li>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <div>
+                                <strong style="display:block; font-family: var(--font-head); letter-spacing: 0.06em;">Phone</strong>
+                                <a href="tel:+15414144844">(541) 414-4844</a>
+                            </div>
+                        </li>
+                        <li>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <div>
+                                <strong style="display:block; font-family: var(--font-head); letter-spacing: 0.06em;">Email</strong>
+                                <a href="mailto:ezra@kkprobuild.com">ezra@kkprobuild.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <div>
+                                <strong style="display:block; font-family: var(--font-head); letter-spacing: 0.06em;">Service Area</strong>
+                                Eagle Point, Medford, Central Point, White City, Shady Cove, Jacksonville, Phoenix, Talent &amp; the Rogue Valley
+                            </div>
+                        </li>
+                        <li>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <div>
+                                <strong style="display:block; font-family: var(--font-head); letter-spacing: 0.06em;">Hours</strong>
+                                Mon &ndash; Sat &middot; 7am &ndash; 6pm<br>
+                                <span style="color: rgba(250,246,238,0.7); font-size: .85rem;">Sunday emergencies by text</span>
+                            </div>
+                        </li>
+                        <li>
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3z"/></svg>
+                            <div>
+                                <strong style="display:block; font-family: var(--font-head); letter-spacing: 0.06em;">Licensed Oregon GC</strong>
+                                CCB # [CCB# TBD] &middot; Bonded &amp; Insured
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo-small.png" alt="K&K ProBuild">
+                <div class="tag">K&amp;K ProBuild</div>
+                <p style="margin-top: .5rem; color: rgba(250,246,238,0.7); font-size: .9rem;">Built Right the First Time. Licensed Oregon general contractor serving Eagle Point and the Rogue Valley.</p>
+            </div>
+            <div>
+                <h5>Services</h5>
+                <ul>
+                    <li><a href="services.html#general">General Construction</a></li>
+                    <li><a href="services.html#mini-splits">Mini-Splits</a></li>
+                    <li><a href="services.html#plumbing">Plumbing (via Table Rock)</a></li>
+                    <li><a href="services.html#decks">Decks &amp; Fencing</a></li>
+                    <li><a href="services.html#adus">ADUs &amp; New Builds</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="testimonials.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Get in Touch</h5>
+                <ul>
+                    <li><a href="tel:+15414144844">(541) 414-4844</a></li>
+                    <li><a href="mailto:ezra@kkprobuild.com">ezra@kkprobuild.com</a></li>
+                    <li>Eagle Point, OR</li>
+                    <li>Mon&ndash;Sat &middot; 7a&ndash;6p</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>&copy; <span id="year">2026</span> K&amp;K ProBuild. All rights reserved.</div>
+            <div class="ccb">Oregon CCB # [CCB# TBD] &middot; Bonded &amp; Insured</div>
+        </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
