@@ -781,6 +781,95 @@ p { margin: 0 0 1em; }
 }
 .lightbox-close:hover { background: var(--amber); }
 
+/* ---------- Modal (form result dialog) ---------- */
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.modal.is-open { display: flex; }
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 36, 26, 0.65);
+    backdrop-filter: blur(2px);
+    animation: modalFade .2s ease;
+}
+.modal-content {
+    position: relative;
+    z-index: 1;
+    background: var(--paper);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    max-width: 480px;
+    width: 100%;
+    padding: 2.5rem 2rem 2rem;
+    text-align: center;
+    animation: modalSlide .25s ease;
+}
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: var(--ink-mute);
+    font-size: 1.6rem;
+    line-height: 1;
+    border-radius: 50%;
+    transition: background .15s ease, color .15s ease;
+}
+.modal-close:hover { background: var(--cream-warm); color: var(--ink); }
+.modal-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background: var(--amber-glow);
+    color: var(--amber);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+}
+.modal-icon.is-error {
+    background: rgba(185, 28, 28, 0.12);
+    color: var(--danger);
+}
+.modal-title {
+    color: var(--forest-darkest);
+    margin-bottom: .6rem;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+.modal-msg {
+    color: var(--ink);
+    font-size: 1.05rem;
+    margin-bottom: .5rem;
+}
+.modal-sub {
+    color: var(--ink-soft);
+    font-size: .95rem;
+    margin-bottom: 1.5rem;
+}
+.modal-sub a { color: var(--forest); border-bottom: 1px dotted var(--amber); }
+.modal-sub a:hover { color: var(--amber); }
+@keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modalSlide {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .modal-backdrop, .modal-content { animation: none; }
+}
+
 /* ---------- Footer ---------- */
 .footer {
     background: var(--forest-darkest);

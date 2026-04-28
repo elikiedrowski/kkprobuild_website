@@ -54,8 +54,9 @@
                     <h2 style="margin-bottom: .35rem;">Request an Estimate</h2>
                     <p style="color: var(--ink-soft); margin-bottom: 1.5rem;">Fill in what you can &mdash; we&rsquo;ll follow up by phone or email.</p>
 
-                    <form id="estimateForm" action="https://formsubmit.co/ezra@kkprobuild.com" method="POST" novalidate>
-                        <!-- FormSubmit config — first submission triggers a one-time activation email to ezra@kkprobuild.com -->
+                    <form id="estimateForm" action="https://formsubmit.co/ezra@kkprobuild.com" method="POST" novalidate data-ajax-endpoint="https://formsubmit.co/ajax/ezra@kkprobuild.com">
+                        <!-- FormSubmit config. JS intercepts and POSTs to the AJAX endpoint above so the user
+                             stays on the page and we show a modal. The plain action + _next is the noscript fallback. -->
                         <input type="hidden" name="_subject" value="New estimate request — K&K ProBuild">
                         <input type="hidden" name="_template" value="table">
                         <input type="hidden" name="_next" value="https://kkprobuild.com/thank-you.html">
@@ -188,6 +189,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Form-result modal (success or error after AJAX submit) -->
+    <div class="modal" id="formModal" aria-hidden="true" role="dialog" aria-labelledby="formModalTitle" aria-describedby="formModalMsg">
+        <div class="modal-backdrop" data-modal-close></div>
+        <div class="modal-content">
+            <button class="modal-close" data-modal-close aria-label="Close dialog">&times;</button>
+            <div class="modal-icon" id="formModalIcon" aria-hidden="true">✓</div>
+            <h2 id="formModalTitle" class="modal-title">Thanks &mdash; we got it</h2>
+            <p id="formModalMsg" class="modal-msg">Ezra will reach out within one business day to talk about your project.</p>
+            <p id="formModalSub" class="modal-sub">If it&rsquo;s urgent, give us a call at <a href="tel:+15414144844">(541) 414-4844</a>.</p>
+            <button type="button" class="btn btn-primary" data-modal-close>Got It</button>
+        </div>
+    </div>
 
     </main>
 
