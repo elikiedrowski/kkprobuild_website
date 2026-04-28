@@ -54,14 +54,14 @@
                     <h2 style="margin-bottom: .35rem;">Request an Estimate</h2>
                     <p style="color: var(--ink-soft); margin-bottom: 1.5rem;">Fill in what you can &mdash; we&rsquo;ll follow up by phone or email.</p>
 
-                    <form id="estimateForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
-                        <!-- Web3Forms access key — REPLACE WITH REAL KEY from web3forms.com (free, no signup needed beyond email verify) -->
-                        <input type="hidden" name="access_key" value="REPLACE_WITH_WEB3FORMS_ACCESS_KEY">
-                        <input type="hidden" name="subject" value="New estimate request — K&K ProBuild">
-                        <input type="hidden" name="from_name" value="kkprobuild.com">
-                        <input type="hidden" name="redirect" value="https://kkprobuild.com/thank-you.html">
-                        <!-- Honeypot -->
-                        <input type="text" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+                    <form id="estimateForm" action="https://formsubmit.co/ezra@kkprobuild.com" method="POST" novalidate>
+                        <!-- FormSubmit config — first submission triggers a one-time activation email to ezra@kkprobuild.com -->
+                        <input type="hidden" name="_subject" value="New estimate request — K&K ProBuild">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://kkprobuild.com/thank-you.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Honeypot (FormSubmit's built-in field name) -->
+                        <input type="text" name="_honey" class="honeypot" tabindex="-1" autocomplete="off">
 
                         <div class="form-row">
                             <div class="form-group">
