@@ -154,12 +154,7 @@
         const emailFallback = '<a href="mailto:ezra@kkprobuild.com">ezra@kkprobuild.com</a>';
 
         form.addEventListener('submit', async (e) => {
-            // Honeypot
-            const honey = form.querySelector('input[name="_honey"]');
-            if (honey && honey.value) {
-                e.preventDefault();
-                return;
-            }
+            // FormSubmit handles the _honey honeypot server-side; no client check needed.
             if (!form.checkValidity()) {
                 e.preventDefault();
                 errEl && errEl.classList.add('is-visible');
