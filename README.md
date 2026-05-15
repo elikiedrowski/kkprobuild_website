@@ -118,7 +118,6 @@ domain:
 
 | Placeholder | Where | What to do |
 |---|---|---|
-| `[CCB# TBD]` | All pages footer + credentials strip + JSON-LD schema | Replace with Ezra's real Oregon CCB license # (ask Ezra; visible at `search.ccb.state.or.us`) |
 | `REPLACE_WITH_WEB3FORMS_ACCESS_KEY` | `contact.html` line ~64 | Sign up at <https://web3forms.com>, verify `ezra@kkprobuild.com`, paste the access key |
 | `Table Rock<br>Plumbing Solutions` placeholder boxes | `index.html`, `services.html` | Drop their real logo into `assets/images/table-rock-logo.png` and swap the `<div class="partner-logo-box">` for an `<img>` tag (commented in source) |
 | `placeholder-before` / `placeholder-after` divs | `gallery.html`, `index.html`, `services.html` | Replace with real before/after photos when Ezra delivers them. See "Adding gallery photos" below |
@@ -205,7 +204,7 @@ add new content, double-check no copy slips them in.
 ## Pre-launch checklist
 
 - [ ] Ezra confirms copy reads correctly on all pages
-- [ ] Real CCB # in place
+- [x] Real CCB # in place (260867)
 - [ ] Web3Forms access key in place — submit test form, confirm it lands in Ezra's inbox
 - [ ] Table Rock logo dropped in
 - [ ] At least 3 real before/after pairs in gallery (placeholders OK at first if needed)
