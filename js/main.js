@@ -48,42 +48,56 @@
         reveals.forEach(el => el.classList.add('is-visible'));
     }
 
-    /* ---- Gallery filters ---- */
-    const filterBar = document.getElementById('galleryFilters');
-    const grid = document.getElementById('galleryGrid');
-    if (filterBar && grid) {
+    /* ---- Gallery photo filters ---- */
+    const filterBar = document.getElementById('photoFilters');
+    const photoGrid = document.getElementById('photoGrid');
+    if (filterBar && photoGrid) {
         filterBar.addEventListener('click', (e) => {
             const btn = e.target.closest('.filter-btn');
             if (!btn) return;
             filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
             btn.classList.add('is-active');
             const filter = btn.dataset.filter;
-            grid.querySelectorAll('.ba-card').forEach(card => {
+            photoGrid.querySelectorAll('.photo-card').forEach(card => {
                 const match = filter === 'all' || card.dataset.category === filter;
                 card.style.display = match ? '' : 'none';
             });
         });
     }
 
-    /* ---- Lightbox ---- */
+    /* ---- Lightbox (before/after pairs + single photos) ---- */
     const lightbox = document.getElementById('lightbox');
     const lbClose = document.getElementById('lightboxClose');
+    const lbPair = document.getElementById('lbPair');
+    const lbSingle = document.getElementById('lbSingle');
     const lbBefore = document.getElementById('lbBefore');
     const lbAfter = document.getElementById('lbAfter');
     const lbTitle = document.getElementById('lbTitle');
     const lbMeta = document.getElementById('lbMeta');
     const lbDesc = document.getElementById('lbDesc');
+    const baGrid = document.getElementById('baGrid');
 
-    if (lightbox && grid) {
+    if (lightbox) {
         const openLightbox = (card) => {
             lbTitle.textContent = card.dataset.title || '';
             lbMeta.textContent = card.dataset.meta || '';
             lbDesc.textContent = card.dataset.desc || '';
-            // when real images exist, swap background-image here
-            const beforeImg = card.dataset.before;
-            const afterImg = card.dataset.after;
-            lbBefore.style.backgroundImage = beforeImg ? `url(${beforeImg})` : '';
-            lbAfter.style.backgroundImage = afterImg ? `url(${afterImg})` : '';
+            const single = card.dataset.image;
+            if (single) {
+                // single-image card
+                if (lbPair) lbPair.style.display = 'none';
+                if (lbSingle) {
+                    lbSingle.src = single;
+                    lbSingle.alt = card.dataset.title || '';
+                    lbSingle.style.display = 'block';
+                }
+            } else {
+                // before/after pair
+                if (lbSingle) { lbSingle.style.display = 'none'; lbSingle.removeAttribute('src'); }
+                if (lbPair) lbPair.style.display = '';
+                lbBefore.style.backgroundImage = card.dataset.before ? `url(${card.dataset.before})` : '';
+                lbAfter.style.backgroundImage = card.dataset.after ? `url(${card.dataset.after})` : '';
+            }
             lightbox.classList.add('is-open');
             lightbox.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
@@ -93,12 +107,14 @@
             lightbox.setAttribute('aria-hidden', 'true');
             document.body.style.overflow = '';
         };
-        grid.addEventListener('click', (e) => {
-            const card = e.target.closest('.ba-card');
+        const onGridClick = (e) => {
+            const card = e.target.closest('.ba-card, .photo-card');
             if (!card) return;
             e.preventDefault();
             openLightbox(card);
-        });
+        };
+        baGrid && baGrid.addEventListener('click', onGridClick);
+        photoGrid && photoGrid.addEventListener('click', onGridClick);
         lbClose && lbClose.addEventListener('click', closeLightbox);
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();

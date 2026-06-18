@@ -479,6 +479,7 @@ p { margin: 0 0 1em; }
     background-color: var(--line-strong);
     position: relative;
 }
+.ba-pair > div:not([data-label])::after { content: none; }
 .ba-pair > div::after {
     content: attr(data-label);
     position: absolute;
@@ -780,6 +781,118 @@ p { margin: 0 0 1em; }
     z-index: 2;
 }
 .lightbox-close:hover { background: var(--amber); }
+
+/* single-image lightbox view */
+.lightbox-single {
+    display: none;
+    width: 100%;
+    max-height: 78vh;
+    object-fit: contain;
+    background: var(--forest-darkest);
+}
+
+/* ---------- Photo grid (single-image gallery) ---------- */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+}
+@media (max-width: 900px) { .photo-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .photo-grid { grid-template-columns: 1fr; } }
+.photo-card {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+.photo-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.photo-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    background: var(--line-strong);
+}
+.photo-card .ph-cap { padding: 1rem 1.1rem; }
+.photo-card .ph-cap .meta {
+    font-family: var(--font-head);
+    font-size: .75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+}
+.photo-card .ph-cap h4 { color: var(--forest-darkest); margin: .15rem 0 0; font-size: 1rem; }
+
+/* ---------- Featured video ---------- */
+.video-feature {
+    max-width: 460px;
+    margin: 0 auto 2.5rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+.video-feature video {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #000;
+}
+.video-feature figcaption { padding: 1rem 1.25rem; }
+.video-feature figcaption .meta {
+    font-family: var(--font-head);
+    font-size: .75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--amber);
+}
+.video-feature figcaption h4 { color: var(--forest-darkest); margin: .15rem 0 .25rem; }
+.video-feature figcaption p { margin: 0; color: var(--ink-soft); font-size: .9rem; }
+
+/* ---------- Real partner logo (overrides dashed placeholder box) ---------- */
+.partner-logo-box:has(img) {
+    border: 1px solid var(--line);
+    background: var(--paper);
+    padding: 0;
+}
+.partner-logo-box img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
+
+/* ---------- MR. COOL authorized dealer badge ---------- */
+.dealer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    background: var(--forest-darkest);
+    color: var(--cream);
+    font-family: var(--font-head);
+    font-size: .8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: .5rem .9rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+.dealer-badge svg { width: 16px; height: 16px; flex: none; }
+
+/* ---------- Highlighted service callout ---------- */
+.service-callout {
+    background: var(--cream-warm);
+    border-left: 4px solid var(--amber);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0;
+}
+.service-callout h3 { font-size: 1.1rem; color: var(--forest-darkest); margin-bottom: .5rem; }
+.service-callout p { margin: 0; color: var(--ink-soft); font-style: italic; }
 
 /* ---------- Modal (form result dialog) ---------- */
 .modal {
