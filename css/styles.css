@@ -833,7 +833,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Featured video ---------- */
 .video-feature {
-    max-width: 460px;
+    max-width: 420px;
     margin: 0 auto 2.5rem;
     background: var(--paper);
     border: 1px solid var(--line);
@@ -845,6 +845,8 @@ p { margin: 0 0 1em; }
     display: block;
     width: 100%;
     height: auto;
+    max-height: 60vh;
+    object-fit: contain;
     background: #000;
 }
 .video-feature figcaption { padding: 1rem 1.25rem; }
@@ -865,34 +867,6 @@ p { margin: 0 0 1em; }
     padding: 0;
 }
 .partner-logo-box img { display: block; width: 100%; height: auto; border-radius: var(--radius); }
-
-/* ---------- MR. COOL authorized dealer badge ---------- */
-.dealer-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: .55rem;
-    background: var(--forest-darkest);
-    color: var(--cream);
-    font-family: var(--font-head);
-    font-size: .8rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: .5rem .9rem;
-    border-radius: 999px;
-    margin-bottom: 1rem;
-}
-.dealer-badge svg { width: 16px; height: 16px; flex: none; }
-
-/* ---------- Highlighted service callout ---------- */
-.service-callout {
-    background: var(--cream-warm);
-    border-left: 4px solid var(--amber);
-    border-radius: var(--radius);
-    padding: 1.25rem 1.5rem;
-    margin: 1.25rem 0;
-}
-.service-callout h3 { font-size: 1.1rem; color: var(--forest-darkest); margin-bottom: .5rem; }
-.service-callout p { margin: 0; color: var(--ink-soft); font-style: italic; }
 
 /* ---------- Modal (form result dialog) ---------- */
 .modal {
