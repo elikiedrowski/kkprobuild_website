@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Recent K&K ProBuild projects in Southern Oregon: kitchen remodels, bath remodels, mini-split installs, decks, ADUs, and more. Before-and-after photo gallery.">
+    <meta name="description" content="Recent K&K ProBuild projects in Southern Oregon: ADUs, mini-split installs, bathrooms, sewer lines, siding, and more. Project photo gallery with before-and-after work.">
     <meta name="theme-color" content="#1f3a26">
-    <title>Gallery — K&K ProBuild | Before &amp; After Projects</title>
+    <title>Gallery — K&K ProBuild | Recent Projects</title>
     <link rel="icon" type="image/png" href="assets/images/logo-small.png">
     <link rel="canonical" href="https://kkprobuild.com/gallery.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,84 +41,22 @@
     <section class="hero hero-page">
         <div class="hero-inner">
             <p class="eyebrow" style="color: var(--amber-light);">Project Gallery</p>
-            <h1>Before &amp; <span>After</span></h1>
+            <h1>Recent <span>Work</span></h1>
             <p class="hero-sub">A walking tour of recent K&amp;K ProBuild projects across the Rogue Valley. The proof is in the finish-out.</p>
         </div>
     </section>
 
+    <!-- Before & After -->
     <section class="section">
         <div class="container">
-            <div class="gallery-filters" id="galleryFilters">
-                <button class="filter-btn is-active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="kitchen">Kitchens</button>
-                <button class="filter-btn" data-filter="bath">Baths</button>
-                <button class="filter-btn" data-filter="mini-split">Mini-Splits</button>
-                <button class="filter-btn" data-filter="deck">Decks &amp; Fencing</button>
-                <button class="filter-btn" data-filter="other">Other</button>
+            <div class="section-head reveal" style="margin-bottom: 2rem;">
+                <p class="eyebrow">Transformations</p>
+                <h2>Before &amp; After</h2>
+                <p>Tap a project to see the full story, side by side.</p>
             </div>
 
-            <div class="ba-grid" id="galleryGrid">
-                <button class="ba-card" data-category="kitchen" data-title="Eagle Point Kitchen Remodel" data-meta="Kitchen Remodel · Eagle Point, OR" data-desc="Full demo, layout change, custom shaker cabinets, quartz counters, and a peninsula that finally seats the whole family.">
-                    <div class="ba-pair">
-                        <div class="placeholder-before" data-label="Before"></div>
-                        <div class="placeholder-after" data-label="After"></div>
-                    </div>
-                    <div class="ba-card-body">
-                        <div class="meta">Kitchen Remodel</div>
-                        <h4>Eagle Point, OR</h4>
-                    </div>
-                </button>
-                <button class="ba-card" data-category="bath" data-title="Medford Master Bath" data-meta="Master Bath · Medford, OR" data-desc="Tub-to-shower conversion, custom curbless walk-in with niche, double vanity, and heated tile floor.">
-                    <div class="ba-pair">
-                        <div class="placeholder-before" data-label="Before"></div>
-                        <div class="placeholder-after" data-label="After"></div>
-                    </div>
-                    <div class="ba-card-body">
-                        <div class="meta">Master Bath</div>
-                        <h4>Medford, OR</h4>
-                    </div>
-                </button>
-                <button class="ba-card" data-category="mini-split" data-title="Central Point Mini-Split" data-meta="Mini-Split Install · Central Point, OR" data-desc="Single-zone Mitsubishi heat pump installed in a converted upstairs bonus room. In and out in one day.">
-                    <div class="ba-pair">
-                        <div class="placeholder-before" data-label="Before"></div>
-                        <div class="placeholder-after" data-label="After"></div>
-                    </div>
-                    <div class="ba-card-body">
-                        <div class="meta">Mini-Split Install</div>
-                        <h4>Central Point, OR</h4>
-                    </div>
-                </button>
-                <button class="ba-card" data-category="deck" data-title="Cedar Deck &amp; Pergola" data-meta="Custom Deck · Eagle Point, OR" data-desc="320 sqft cedar deck with a built-in pergola for shade and a hidden-fastener finish.">
-                    <div class="ba-pair">
-                        <div class="placeholder-before" data-label="Before"></div>
-                        <div class="placeholder-after" data-label="After"></div>
-                    </div>
-                    <div class="ba-card-body">
-                        <div class="meta">Custom Deck</div>
-                        <h4>Eagle Point, OR</h4>
-                    </div>
-                </button>
-                <button class="ba-card" data-category="kitchen" data-title="White City Galley Kitchen" data-meta="Kitchen Remodel · White City, OR" data-desc="Galley kitchen update: new cabinets, butcher-block counter, subway tile backsplash, undermount sink.">
-                    <div class="ba-pair">
-                        <div class="placeholder-before" data-label="Before"></div>
-                        <div class="placeholder-after" data-label="After"></div>
-                    </div>
-                    <div class="ba-card-body">
-                        <div class="meta">Kitchen Remodel</div>
-                        <h4>White City, OR</h4>
-                    </div>
-                </button>
-                <button class="ba-card" data-category="bath" data-title="Phoenix Hall Bath" data-meta="Hall Bath · Phoenix, OR" data-desc="Hall bath refresh with new vanity, shower-tub combo retile, and updated lighting.">
-                    <div class="ba-pair">
-                        <div class="placeholder-before" data-label="Before"></div>
-                        <div class="placeholder-after" data-label="After"></div>
-                    </div>
-                    <div class="ba-card-body">
-                        <div class="meta">Hall Bath</div>
-                        <h4>Phoenix, OR</h4>
-                    </div>
-                </button>
-                <button class="ba-card" data-category="other" data-title="Shop Addition Build" data-meta="Shop Addition · Southern Oregon" data-desc="Ground-up addition to an existing shop: poured footings and slab, framed and wrapped, then sided and tied into the original structure." data-before="assets/images/projects/shop-addition-before.jpg" data-after="assets/images/projects/shop-addition-after.jpg">
+            <div class="ba-grid" id="baGrid">
+                <button class="ba-card" data-title="Shop Addition Build" data-meta="Shop Addition · Southern Oregon" data-desc="Ground-up addition to an existing shop: poured footings and slab, framed and wrapped, then sided and tied into the original structure." data-before="assets/images/projects/shop-addition-before.jpg" data-after="assets/images/projects/shop-addition-after.jpg">
                     <div class="ba-pair">
                         <div data-label="Before" style="background-image: url('assets/images/projects/shop-addition-before.jpg');"></div>
                         <div data-label="After" style="background-image: url('assets/images/projects/shop-addition-after.jpg');"></div>
@@ -128,7 +66,7 @@
                         <h4>Southern Oregon</h4>
                     </div>
                 </button>
-                <button class="ba-card" data-category="other" data-title="Water Filtration Install" data-meta="Water Filtration &amp; Softener · Southern Oregon" data-desc="Whole-home water softener and filtration system installed in a dedicated utility shed, integrated with the existing well and electrical service." data-before="assets/images/projects/water-filtration-before.jpg" data-after="assets/images/projects/water-filtration-after.jpg">
+                <button class="ba-card" data-title="Water Filtration Install" data-meta="Water Filtration &amp; Softener · Southern Oregon" data-desc="Whole-home water softener and filtration system installed in a dedicated utility shed, integrated with the existing well and electrical service." data-before="assets/images/projects/water-filtration-before.jpg" data-after="assets/images/projects/water-filtration-after.jpg">
                     <div class="ba-pair">
                         <div data-label="Before" style="background-image: url('assets/images/projects/water-filtration-before.jpg');"></div>
                         <div data-label="After" style="background-image: url('assets/images/projects/water-filtration-after.jpg');"></div>
@@ -138,40 +76,116 @@
                         <h4>Southern Oregon</h4>
                     </div>
                 </button>
-                <button class="ba-card" data-category="deck" data-title="Cedar Privacy Fence" data-meta="Privacy Fence · Medford, OR" data-desc="180 linear feet of dog-eared cedar privacy fencing with double-gate access for trailer parking.">
-                    <div class="ba-pair">
-                        <div class="placeholder-before" data-label="Before"></div>
-                        <div class="placeholder-after" data-label="After"></div>
-                    </div>
-                    <div class="ba-card-body">
-                        <div class="meta">Privacy Fence</div>
-                        <h4>Medford, OR</h4>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent project photos -->
+    <section class="section section-cream">
+        <div class="container">
+            <div class="section-head reveal" style="margin-bottom: 2rem;">
+                <p class="eyebrow">Recent Work</p>
+                <h2>Project Photos</h2>
+                <p>A look at recent K&amp;K ProBuild jobs across the Rogue Valley &mdash; ADUs, mini-splits, plumbing, and more.</p>
+            </div>
+
+            <figure class="video-feature reveal">
+                <video controls muted playsinline preload="metadata">
+                    <source src="assets/video/shower-walk-in-conversion.mp4" type="video/mp4">
+                    Your browser doesn&rsquo;t support embedded video. <a href="assets/video/shower-walk-in-conversion.mp4">Download the clip</a>.
+                </video>
+                <figcaption>
+                    <div class="meta">Bath Remodel &middot; Video</div>
+                    <h4>Corner Shower &rarr; Walk-In Conversion</h4>
+                    <p>We moved the shower out of the corner into a full walk-in and rerouted all the plumbing to suit the new layout.</p>
+                </figcaption>
+            </figure>
+
+            <div class="gallery-filters" id="photoFilters">
+                <button class="filter-btn is-active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="adu">ADUs</button>
+                <button class="filter-btn" data-filter="bath">Bathrooms</button>
+                <button class="filter-btn" data-filter="mini-split">Mini-Splits</button>
+                <button class="filter-btn" data-filter="plumbing">Plumbing</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+
+            <div class="photo-grid" id="photoGrid">
+                <button class="photo-card" data-category="adu" data-image="assets/images/projects/adu-20x40-exterior.jpg" data-title="20&prime; &times; 40&prime; ADU with Mini-Split &amp; Bath" data-meta="ADU Build" data-desc="A 20-by-40-foot accessory dwelling unit built out with a ductless mini-split system and a full bathroom.">
+                    <img src="assets/images/projects/adu-20x40-exterior.jpg" alt="20 by 40 foot ADU built by K&amp;K ProBuild with an exterior ductless mini-split unit" loading="lazy">
+                    <div class="ph-cap"><div class="meta">ADU Build</div><h4>Mini-split &amp; full bath</h4></div>
                 </button>
-                <button class="ba-card" data-category="mini-split" data-title="Multi-Zone Whole-House" data-meta="Mini-Split Install · Jacksonville, OR" data-desc="Three-head multi-zone Daikin system across the main living area, master, and a converted office.">
-                    <div class="ba-pair">
-                        <div class="placeholder-before" data-label="Before"></div>
-                        <div class="placeholder-after" data-label="After"></div>
-                    </div>
-                    <div class="ba-card-body">
-                        <div class="meta">Mini-Split Install</div>
-                        <h4>Jacksonville, OR</h4>
-                    </div>
+                <button class="photo-card" data-category="adu" data-image="assets/images/projects/adu-exterior-yellow.jpg" data-title="Detached ADU" data-meta="ADU Build" data-desc="Detached accessory dwelling unit framed, sided, and finished out with a full bathroom inside.">
+                    <img src="assets/images/projects/adu-exterior-yellow.jpg" alt="Detached ADU built by K&amp;K ProBuild, sided and finished on a wooded Southern Oregon lot" loading="lazy">
+                    <div class="ph-cap"><div class="meta">ADU Build</div><h4>Detached ADU</h4></div>
+                </button>
+                <button class="photo-card" data-category="adu" data-image="assets/images/projects/adu-kitchenette.jpg" data-title="ADU Kitchenette" data-meta="ADU Interior" data-desc="Finished ADU kitchenette with shaker cabinets, stone counters, and a natural wood plank ceiling.">
+                    <img src="assets/images/projects/adu-kitchenette.jpg" alt="Finished ADU kitchenette with white shaker cabinets, stone counters, and a wood plank ceiling" loading="lazy">
+                    <div class="ph-cap"><div class="meta">ADU Interior</div><h4>Kitchenette &amp; wet bar</h4></div>
+                </button>
+                <button class="photo-card" data-category="adu" data-image="assets/images/projects/adu-interior.jpg" data-title="ADU Living Space" data-meta="ADU Interior" data-desc="Bright, finished ADU interior with luxury vinyl plank flooring and a natural wood ceiling.">
+                    <img src="assets/images/projects/adu-interior.jpg" alt="Bright finished ADU interior with luxury vinyl plank flooring and a natural wood ceiling" loading="lazy">
+                    <div class="ph-cap"><div class="meta">ADU Interior</div><h4>Open living space</h4></div>
+                </button>
+                <button class="photo-card" data-category="bath" data-image="assets/images/projects/adu-bathroom-feature.jpg" data-title="Bathroom &mdash; Walk-In Shower &amp; Vessel Sink" data-meta="Bathroom" data-desc="Custom bathroom with a curbless walk-in shower, a bold statement wall, and a black vessel-sink vanity.">
+                    <img src="assets/images/projects/adu-bathroom-feature.jpg" alt="Custom bathroom with a curbless walk-in shower, statement wall, and black vessel-sink vanity" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Bathroom</div><h4>Walk-in shower &amp; vessel sink</h4></div>
+                </button>
+                <button class="photo-card" data-category="bath" data-image="assets/images/projects/adu-bathroom-vanity.jpg" data-title="Full Bath &mdash; Vanity &amp; Tile Floor" data-meta="Bathroom" data-desc="Compact full bath finished with a clean vanity, framed mirror, and marble-look tile floor.">
+                    <img src="assets/images/projects/adu-bathroom-vanity.jpg" alt="Compact full bathroom with a white vanity, framed mirror, and marble-look tile floor" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Bathroom</div><h4>Vanity &amp; tile floor</h4></div>
+                </button>
+                <button class="photo-card" data-category="bath" data-image="assets/images/projects/adu-bathroom-shower.jpg" data-title="Walk-In Shower" data-meta="Bathroom" data-desc="Walk-in shower with a rain head and matte-black fixtures over dark tile.">
+                    <img src="assets/images/projects/adu-bathroom-shower.jpg" alt="Walk-in shower with a rain shower head and matte-black fixtures over dark tile" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Bathroom</div><h4>Walk-in shower</h4></div>
+                </button>
+                <button class="photo-card" data-category="mini-split" data-image="assets/images/projects/mr-cool-condenser.jpg" data-title="MR. COOL Condenser Install" data-meta="Mini-Split" data-desc="Exterior MR. COOL condenser set with a tidy line-set run. K&amp;K ProBuild is a licensed MR. COOL dealer.">
+                    <img src="assets/images/projects/mr-cool-condenser.jpg" alt="Exterior MR. COOL ductless mini-split condenser installed by K&amp;K ProBuild" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Mini-Split</div><h4>MR. COOL condenser</h4></div>
+                </button>
+                <button class="photo-card" data-category="mini-split" data-image="assets/images/projects/mini-split-indoor.jpg" data-title="Indoor Mini-Split Head" data-meta="Mini-Split" data-desc="Wall-mounted ductless mini-split head delivering quiet heating and cooling to a single zone.">
+                    <img src="assets/images/projects/mini-split-indoor.jpg" alt="Wall-mounted ductless mini-split indoor head unit installed by K&amp;K ProBuild" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Mini-Split</div><h4>Indoor head unit</h4></div>
+                </button>
+                <button class="photo-card" data-category="mini-split" data-image="assets/images/projects/mini-split-exterior.jpg" data-title="Mini-Split on a Manufactured Home" data-meta="Mini-Split" data-desc="Ductless mini-split added to a single-wide manufactured home &mdash; efficient comfort where ductwork isn&rsquo;t practical.">
+                    <img src="assets/images/projects/mini-split-exterior.jpg" alt="Ductless mini-split outdoor unit installed on a single-wide manufactured home" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Mini-Split</div><h4>Single-wide install</h4></div>
+                </button>
+                <button class="photo-card" data-category="plumbing" data-image="assets/images/projects/sewer-line-1.jpg" data-title="Sewer Line Addition" data-meta="Plumbing" data-desc="Part of a 100-foot sewer line addition for an ADU, tied into the existing main with a new clean-out.">
+                    <img src="assets/images/projects/sewer-line-1.jpg" alt="Sewer line tie-in with a new clean-out during a 100-foot sewer addition for an ADU" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Plumbing</div><h4>Sewer line addition</h4></div>
+                </button>
+                <button class="photo-card" data-category="plumbing" data-image="assets/images/projects/sewer-line-2.jpg" data-title="Sewer Reroute &amp; Clean-Out" data-meta="Plumbing" data-desc="New ABS sewer lines and clean-outs run during a 100-foot sewer addition for an ADU.">
+                    <img src="assets/images/projects/sewer-line-2.jpg" alt="New ABS sewer lines and clean-outs run for a 100-foot sewer addition" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Plumbing</div><h4>Reroute &amp; clean-out</h4></div>
+                </button>
+                <button class="photo-card" data-category="plumbing" data-image="assets/images/projects/sewer-line-3.jpg" data-title="100&prime; Sewer Trench" data-meta="Plumbing" data-desc="Trenched run for a 100-foot sewer line addition serving a new ADU.">
+                    <img src="assets/images/projects/sewer-line-3.jpg" alt="Open trench for a 100-foot sewer line addition serving a new ADU" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Plumbing</div><h4>100&prime; sewer trench</h4></div>
+                </button>
+                <button class="photo-card" data-category="plumbing" data-image="assets/images/projects/adu-tankless-heater.jpg" data-title="Tankless Water Heater" data-meta="Plumbing" data-desc="Exterior tankless water heater providing on-demand hot water for an ADU.">
+                    <img src="assets/images/projects/adu-tankless-heater.jpg" alt="Exterior tankless water heater providing on-demand hot water for an ADU" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Plumbing</div><h4>Tankless water heater</h4></div>
+                </button>
+                <button class="photo-card" data-category="other" data-image="assets/images/projects/siding-replacement.jpg" data-title="Siding Replacement" data-meta="Exterior" data-desc="Full siding replacement on a single-story home, worked from a lift to re-side above the windows and roofline.">
+                    <img src="assets/images/projects/siding-replacement.jpg" alt="Siding replacement in progress on a single-story Southern Oregon home, worked from a lift" loading="lazy">
+                    <div class="ph-cap"><div class="meta">Exterior</div><h4>Siding replacement</h4></div>
                 </button>
             </div>
 
-            <p class="text-center mt-4" style="color: var(--ink-mute); font-size: .9rem;">More project photos are being added as our crew finishes each job &mdash; check back soon.</p>
+            <p class="text-center mt-4" style="color: var(--ink-mute); font-size: .9rem;">More project photos are added as our crew finishes each job &mdash; check back soon.</p>
         </div>
     </section>
 
     <!-- Lightbox -->
-    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true">
         <div class="lightbox-content">
             <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
-            <div class="lightbox-pair">
-                <div class="placeholder-before" id="lbBefore" data-label="Before"></div>
-                <div class="placeholder-after" id="lbAfter" data-label="After"></div>
+            <div class="lightbox-pair" id="lbPair">
+                <div id="lbBefore" data-label="Before"></div>
+                <div id="lbAfter" data-label="After"></div>
             </div>
+            <img class="lightbox-single" id="lbSingle" alt="">
             <div class="lightbox-body">
                 <div class="meta" id="lbMeta" style="font-family: var(--font-head); font-size: .8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--amber);"></div>
                 <h3 id="lbTitle"></h3>
